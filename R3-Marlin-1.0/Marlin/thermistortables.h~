@@ -566,7 +566,7 @@ const short temptable_55[][2] PROGMEM = {
 // beta: 4092
 // max adc: 1023
 
-const short temptable_90[][2] PROGMEM = {
+const short temptable_90[][2] PROGMEM  = {
    {1*OVERSAMPLENR, 821},
    {54*OVERSAMPLENR, 252},
    {107*OVERSAMPLENR, 207},
