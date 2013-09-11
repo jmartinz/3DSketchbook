@@ -97,6 +97,7 @@
 // to check that the wiring to the thermistor is not broken. 
 // Otherwise this would lead to the heater being powered on all the time.
 #define HEATER_0_MINTEMP 5
+//#define HEATER_0_MINTEMP 0 // Solo para calibrar el extrusor sin hotend. 
 #define HEATER_1_MINTEMP 5
 #define HEATER_2_MINTEMP 5
 #define BED_MINTEMP 5
@@ -184,11 +185,12 @@
 
 //this prevents dangerous Extruder moves, i.e. if the temperature is under the limit
 //can be software-disabled for whatever purposes by
-#define PREVENT_DANGEROUS_EXTRUDE
+#define PREVENT_DANGEROUS_EXTRUDE 
 //if PREVENT_DANGEROUS_EXTRUDE is on, you can still disable (uncomment) very long bits of extrusion separately.
 #define PREVENT_LENGTHY_EXTRUDE
 
 #define EXTRUDE_MINTEMP 170
+//#define EXTRUDE_MINTEMP 0  // Solo para calibrar extrusor SIN hotend
 #define EXTRUDE_MAXLENGTH (X_MAX_LENGTH+Y_MAX_LENGTH) //prevent extrusion of very large distances.
 
 //===========================================================================
@@ -281,7 +283,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 // default settings 
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 2560, 719.2}  // default steps per unit for ultimaker 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 4040, 1254}  // default steps per unit for ultimaker 
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 4040, 752,68}  // default steps per unit for ultimaker 
 
 //#define DEFAULT_MAX_FEEDRATE          {330, 330, 3.3, 45}    // (mm/sec)    
 //#define DEFAULT_MAX_ACCELERATION      {3000,3000,20,3000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
