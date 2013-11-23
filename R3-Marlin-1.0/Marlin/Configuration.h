@@ -96,11 +96,12 @@
 // The minimal temperature defines the temperature below which the heater will not be enabled It is used
 // to check that the wiring to the thermistor is not broken. 
 // Otherwise this would lead to the heater being powered on all the time.
-#define HEATER_0_MINTEMP 5
-//#define HEATER_0_MINTEMP 0 // Solo para calibrar el extrusor sin hotend. 
+//#define HEATER_0_MINTEMP 5
+#define HEATER_0_MINTEMP 0 // Solo para calibrar el extrusor sin hotend. 
 #define HEATER_1_MINTEMP 5
 #define HEATER_2_MINTEMP 5
-#define BED_MINTEMP 5
+//#define BED_MINTEMP 5
+#define BED_MINTEMP 0  // Para preubas sin hotbed
 
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
