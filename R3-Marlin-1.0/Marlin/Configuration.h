@@ -83,7 +83,7 @@
 // 55 is 100k thermistor - ATC Semitec 104GT-2 (Used in ParCan) (1k pullup)
 // 90 is EPCOS 100K Thermistor (B57560G1104F) vendido por reclone3D
 
-#define TEMP_SENSOR_0 90//7  //5 
+#define TEMP_SENSOR_0 1  //90//7  //5 
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_BED 1
