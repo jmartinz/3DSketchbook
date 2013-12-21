@@ -46,7 +46,7 @@
 // 301 = Rambo
 
 #ifndef MOTHERBOARD
-#define MOTHERBOARD 33
+#define MOTHERBOARD 62
 #endif
 
 //// The following define selects which power supply you have. Please choose the one that matches your setup
@@ -83,7 +83,7 @@
 // 55 is 100k thermistor - ATC Semitec 104GT-2 (Used in ParCan) (1k pullup)
 // 90 is EPCOS 100K Thermistor (B57560G1104F) vendido por reclone3D
 
-#define TEMP_SENSOR_0 90//7  //5 
+#define TEMP_SENSOR_0 1  //90//7  //5 
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_BED 1
@@ -315,7 +315,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 // M501 - reads parameters from EEPROM (if you need reset them after you changed them temporarily).  
 // M502 - reverts to the default "factory settings".  You still need to store them in EEPROM afterwards if you want to.
 //define this to enable eeprom support
-#define EEPROM_SETTINGS
+//#define EEPROM_SETTINGS
 //to disable EEPROM Serial responses and decrease program space by ~1700 byte: comment this out:
 // please keep turned on if you can.
 //#define EEPROM_CHITCHAT

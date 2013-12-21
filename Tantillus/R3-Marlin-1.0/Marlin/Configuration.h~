@@ -81,9 +81,8 @@
 // 51 is 100k thermistor - EPCOS (1k pullup)
 // 52 is 200k thermistor - ATC Semitec 204GT-2 (1k pullup)
 // 55 is 100k thermistor - ATC Semitec 104GT-2 (Used in ParCan) (1k pullup)
-// 90 is EPCOS 100K Thermistor (B57560G1104F) vendido por reclone3D
 
-#define TEMP_SENSOR_0 90//7  //5 
+#define TEMP_SENSOR_0 7  //5 
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_BED 1
@@ -96,12 +95,10 @@
 // The minimal temperature defines the temperature below which the heater will not be enabled It is used
 // to check that the wiring to the thermistor is not broken. 
 // Otherwise this would lead to the heater being powered on all the time.
-//#define HEATER_0_MINTEMP 5
-#define HEATER_0_MINTEMP 0 // Solo para calibrar el extrusor sin hotend. 
+#define HEATER_0_MINTEMP 5
 #define HEATER_1_MINTEMP 5
 #define HEATER_2_MINTEMP 5
-//#define BED_MINTEMP 5
-#define BED_MINTEMP 0  // Para preubas sin hotbed
+#define BED_MINTEMP 5
 
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
@@ -186,12 +183,11 @@
 
 //this prevents dangerous Extruder moves, i.e. if the temperature is under the limit
 //can be software-disabled for whatever purposes by
-#define PREVENT_DANGEROUS_EXTRUDE 
+#define PREVENT_DANGEROUS_EXTRUDE
 //if PREVENT_DANGEROUS_EXTRUDE is on, you can still disable (uncomment) very long bits of extrusion separately.
 #define PREVENT_LENGTHY_EXTRUDE
 
 #define EXTRUDE_MINTEMP 170
-//#define EXTRUDE_MINTEMP 0  // Solo para calibrar extrusor SIN hotend
 #define EXTRUDE_MAXLENGTH (X_MAX_LENGTH+Y_MAX_LENGTH) //prevent extrusion of very large distances.
 
 //===========================================================================
@@ -284,7 +280,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 // default settings 
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 2560, 719.2}  // default steps per unit for ultimaker 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 4040, 752,68}  // default steps per unit for ultimaker 
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 4040, 1254}  // default steps per unit for ultimaker 
 
 //#define DEFAULT_MAX_FEEDRATE          {330, 330, 3.3, 45}    // (mm/sec)    
 //#define DEFAULT_MAX_ACCELERATION      {3000,3000,20,3000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
@@ -315,7 +311,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 // M501 - reads parameters from EEPROM (if you need reset them after you changed them temporarily).  
 // M502 - reverts to the default "factory settings".  You still need to store them in EEPROM afterwards if you want to.
 //define this to enable eeprom support
-#define EEPROM_SETTINGS
+//#define EEPROM_SETTINGS
 //to disable EEPROM Serial responses and decrease program space by ~1700 byte: comment this out:
 // please keep turned on if you can.
 //#define EEPROM_CHITCHAT
